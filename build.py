@@ -17,7 +17,7 @@ SRC = ROOT / "src"
 
 # Set this once the custom domain is connected, e.g. "https://habivox.app".
 # Canonical URLs, the sitemap and social preview images need the full URL.
-SITE_URL = "https://habivox.in"
+SITE_URL = "https://www.habivox.in"
 
 PLAY = "https://play.google.com/store/apps/details?id=com.habivox.app"
 EMAIL = "ebad7work@gmail.com"
