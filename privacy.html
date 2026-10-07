@@ -67,10 +67,13 @@
       <h2>Information We Collect</h2>
       <p>HabiVox collects the minimum information required to operate your account and deliver personalized habit and expense tracking features.</p>
       <ul>
-        <li><strong>Google login information:</strong> We use Firebase Auth for Google sign-in. This enables secure account access and does not store your Google password.</li>
+        <li><strong>Account information:</strong> We use Firebase Auth for Google sign-in and email sign-in. This gives us your email address, and your name if you sign in with Google. HabiVox never sees your Google password.</li>
         <li><strong>Habit data:</strong> Personal habit entries, progress, reminders, and completion status.</li>
         <li><strong>Expense data:</strong> Personal expense records, categories, amounts, and related notes.</li>
+        <li><strong>Daily schedule:</strong> The wake, sleep, and work times you enter, used to time your AI Coach tasks.</li>
         <li><strong>Notification preferences:</strong> Push notification settings used only for reminders and alerts.</li>
+        <li><strong>Usage data:</strong> Basic app usage events, such as which screens are opened, used only to improve HabiVox.</li>
+        <li><strong>Feedback:</strong> Anything you choose to send us through the feedback form.</li>
       </ul>
 
       <h2>How We Store Your Data</h2>
@@ -78,24 +81,30 @@
       <p>We do not store payment card data or highly sensitive identification information. Your tracked habits and expenses remain within your HabiVox account.</p>
 
       <h2>Authentication</h2>
-      <p>HabiVox uses Firebase Authentication to sign users in with Google. The service handles authentication securely, and HabiVox receives only the information needed to establish your account.</p>
+      <p>HabiVox uses Firebase Authentication to sign users in with Google or with an email address. The service handles authentication securely, and HabiVox receives only the information needed to establish your account.</p>
+
+      <h2>AI Coach</h2>
+      <p>When AI Coach creates or refreshes your weekly plan, HabiVox sends a summary of your habits to Groq, an AI service, to generate the plan. This summary includes habit names, goals, recent progress, and your daily schedule. It does not include your email address or your expense records. Groq processes this data only to return the plan, under its own privacy policy.</p>
 
       <h2>Notifications</h2>
       <p>To help you stay on track, HabiVox may send push notifications for reminders and habit alerts. Notifications are only used for app-related alerts and are not shared with third parties.</p>
 
       <h2>Data Sharing and Third Parties</h2>
       <p>We do not sell your data to third parties. Your information is used solely to provide the HabiVox service.</p>
-      <p>Third-party services used for authentication and data storage include Firebase Auth and Google Firestore. These services process data under their own privacy policies.</p>
+      <p>Third-party services used to run HabiVox are Firebase Auth, Google Firestore and Firebase Analytics (Google), Vercel (hosting), and Groq (AI Coach). These services process data under their own privacy policies.</p>
 
       <h2>Security</h2>
       <p>We follow industry-standard practices to protect your data. Access to your data is limited to what is necessary for the app to function.</p>
       <p>Because no system is completely impervious to risk, we encourage users to protect their account credentials and use strong passwords for associated Google accounts.</p>
 
+      <h2>Deleting Your Account</h2>
+      <p>You can ask us to delete your account and all of its data at any time. See the <a href="delete-account.html">delete account page</a> for how.</p>
+
       <h2>Contact</h2>
       <p>If you have questions or concerns about this privacy policy, please get in touch:</p>
       <p><a href="mailto:ebad7work@gmail.com">ebad7work@gmail.com</a></p>
 
-      <p class="updated">Last updated: May 21, 2026</p>
+      <p class="updated">Last updated: October 7, 2026</p>
     </article>
   </div>
 </main>
