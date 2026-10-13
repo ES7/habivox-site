@@ -20,6 +20,7 @@ SRC = ROOT / "src"
 SITE_URL = "https://www.habivox.in"
 
 PLAY = "https://play.google.com/store/apps/details?id=com.habivox.app"
+WEBAPP = "https://app.habivox.in"
 EMAIL = "ebad7work@gmail.com"
 UPDATED = "6 October 2026"
 
@@ -133,7 +134,7 @@ def fill(html):
         return ICONS[name]
 
     html = re.sub(r"\{\{icon:([a-z0-9-]+)\}\}", icon, html)
-    for key, value in {"PLAY": PLAY, "EMAIL": EMAIL, "UPDATED": UPDATED}.items():
+    for key, value in {"PLAY": PLAY, "WEBAPP": WEBAPP, "EMAIL": EMAIL, "UPDATED": UPDATED}.items():
         html = html.replace("{{" + key + "}}", value)
     return html
 
