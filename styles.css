@@ -207,6 +207,20 @@ summary:focus-visible {
   margin-top: var(--s5);
 }
 
+.cta-pair {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.center .cta-pair {
+  justify-content: center;
+}
+
+.is-ios .cta-pair .btn-web {
+  order: -1;
+}
+
 .note {
   margin-top: var(--s2);
   color: var(--muted);
@@ -625,6 +639,10 @@ summary:focus-visible {
   .cta .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .cta-pair {
+    flex-direction: column;
   }
 
   .section {

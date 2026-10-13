@@ -81,6 +81,12 @@ def header(home):
         for anchor, label in [("habits", "Habits"), ("insights", "Insights"), ("money", "Money"), ("ai", "AI Coach")]
     )
     return f"""<body>
+<script>
+  // iPhone and iPad can't install the Android app, so show "Use in browser" first there.
+  if (/iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {{
+    document.documentElement.classList.add('is-ios');
+  }}
+</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="header">
   <div class="wrap header__inner">
@@ -92,14 +98,14 @@ def header(home):
       <ul class="nav__links">
 {links}
       </ul>
-      <a class="btn" href="{{{{PLAY}}}}">Get the app</a>
+      <a class="btn" href="{base}#start">Get started</a>
       <details class="menu">
         <summary aria-label="Menu"><span class="icon-open">{{{{icon:menu}}}}</span><span class="icon-close">{{{{icon:x}}}}</span></summary>
         <div class="menu__panel">
           <ul>
 {links}
           </ul>
-          <a class="btn" href="{{{{PLAY}}}}">Get the app</a>
+          <a class="btn" href="{base}#start">Get started</a>
         </div>
       </details>
     </nav>

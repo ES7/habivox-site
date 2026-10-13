@@ -24,12 +24,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="styles.css?v=9e4456d3">
+  <link rel="stylesheet" href="styles.css?v=578d0311">
   <!-- Vercel Web Analytics (cookieless visitor and page view counts) -->
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
+<script>
+  // iPhone and iPad can't install the Android app, so show "Use in browser" first there.
+  if (/iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+    document.documentElement.classList.add('is-ios');
+  }
+</script>
 <a class="skip" href="#main">Skip to content</a>
 <header class="header">
   <div class="wrap header__inner">
@@ -44,7 +50,7 @@
           <li><a href="#money">Money</a></li>
           <li><a href="#ai">AI Coach</a></li>
       </ul>
-      <a class="btn" href="https://play.google.com/store/apps/details?id=com.habivox.app">Get the app</a>
+      <a class="btn" href="#start">Get started</a>
       <details class="menu">
         <summary aria-label="Menu"><span class="icon-open"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></span><span class="icon-close"><svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span></summary>
         <div class="menu__panel">
@@ -54,7 +60,7 @@
           <li><a href="#money">Money</a></li>
           <li><a href="#ai">AI Coach</a></li>
           </ul>
-          <a class="btn" href="https://play.google.com/store/apps/details?id=com.habivox.app">Get the app</a>
+          <a class="btn" href="#start">Get started</a>
         </div>
       </details>
     </nav>
@@ -67,8 +73,11 @@
         <h1>Habits and money, in one app.</h1>
         <p class="lead">Log habits and expenses in a few taps. HabiVox shows which days you slip and where your money goes.</p>
         <div class="cta">
-          <a class="btn" href="https://play.google.com/store/apps/details?id=com.habivox.app">Get it on Google Play <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-          <p class="note">On iPhone or a computer? <a href="https://app.habivox.in">Use it in your browser</a>.</p>
+          <div class="cta-pair">
+            <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.habivox.app">Get it on Google Play <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+            <a class="btn btn-web" href="https://app.habivox.in">Use in browser <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+          <p class="note">Free. One account works on both.</p>
         </div>
       </div>
       <div class="hero__media">
@@ -191,12 +200,16 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="start">
     <div class="wrap grid">
       <div class="center">
         <h2>Start with one habit today.</h2>
         <div class="cta">
-          <a class="btn" href="https://play.google.com/store/apps/details?id=com.habivox.app">Get it on Google Play <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <div class="cta-pair">
+            <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.habivox.app">Get it on Google Play <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+            <a class="btn btn-web" href="https://app.habivox.in">Use in browser <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+          <p class="note">Android app or browser, your choice.</p>
         </div>
       </div>
     </div>
