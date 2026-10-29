@@ -143,9 +143,15 @@ def fill(html):
         return ICONS[name]
 
     html = re.sub(r"\{\{icon:([a-z0-9-]+)\}\}", icon, html)
+    # Images are cached for a week, so add a version that changes with the file.
+    html = re.sub(r'src="(assets/screens/[^"?]+)"', lambda m: f'src="{m.group(1)}?v={file_version(m.group(1))}"', html)
     for key, value in {"PLAY": PLAY, "WEBAPP": WEBAPP, "EMAIL": EMAIL, "UPDATED": UPDATED}.items():
         html = html.replace("{{" + key + "}}", value)
     return html
+
+
+def file_version(rel):
+    return hashlib.md5((ROOT / rel).read_bytes()).hexdigest()[:8]
 
 
 def check(name, html):
