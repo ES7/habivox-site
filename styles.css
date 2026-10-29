@@ -333,7 +333,7 @@ summary:focus-visible {
 
 .phone img {
   width: 100%;
-  aspect-ratio: 600 / 1204;
+  aspect-ratio: 600 / 1310;
   border-radius: 34px;
   background: var(--white);
   object-fit: cover;
