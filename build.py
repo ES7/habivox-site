@@ -78,7 +78,7 @@ def header(home):
     base = "" if home else "index.html"
     links = "\n".join(
         f'          <li><a href="{base}#{anchor}">{label}</a></li>'
-        for anchor, label in [("money", "Money"), ("ai", "AI Coach"), ("insights", "Insights"), ("habits", "Habits")]
+        for anchor, label in [("habits", "Habits"), ("money", "Money"), ("ai", "AI Coach"), ("insights", "Insights")]
     )
     return f"""<body>
 <script>
